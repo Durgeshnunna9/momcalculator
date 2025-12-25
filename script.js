@@ -1,3 +1,11 @@
+let v2go = document.getElementById("value2");
+
+v2go.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      calculate();
+    }
+  });
+
 function calculate() {
     const v1Input = document.getElementById("value1");
     const v2Input = document.getElementById("value2");
