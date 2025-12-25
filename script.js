@@ -7,6 +7,7 @@ function calculate() {
   
     const resultEl = document.getElementById("result");
     const rankEl = document.getElementById("rank");
+    const gradeEl = document.getElementById("grade");
   
     if (isNaN(v1) || isNaN(v2)) {
       resultEl.textContent = "Result: Please enter both values";
@@ -17,13 +18,13 @@ function calculate() {
     const result = (v1 + v2) / 2;
     resultEl.textContent = `Result: ${result}`;
   
-    if (result > 90) rankEl.textContent = "A1";
-    else if (result > 80) rankEl.textContent = "A2";
-    else if (result > 70) rankEl.textContent = "B1";
-    else if (result > 60) rankEl.textContent = "B2";
-    else if (result > 50) rankEl.textContent = "C1";
-    else if (result > 40) rankEl.textContent = "C2";
-    else if (result > 34) rankEl.textContent = "D";
+    if (result > 90) {rankEl.textContent = "Grade: A1"; gradeEl.textContent = "Grade Point: 10";}
+    else if (result > 80)  {rankEl.textContent = "Grade: A2"; gradeEl.textContent = "Grade Point: 9";}
+    else if (result > 70)  {rankEl.textContent = "Grade: B1"; gradeEl.textContent = "Grade Point: 8";}
+    else if (result > 60)  {rankEl.textContent = "Grade: B2"; gradeEl.textContent = "Grade Point: 7";}
+    else if (result > 50)  {rankEl.textContent = "Grade: C1"; gradeEl.textContent = "Grade Point: 6";}
+    else if (result > 40)  {rankEl.textContent = "Grade: C2"; gradeEl.textContent = "Grade Point: 5";}
+    else if (result > 34)  {rankEl.textContent = "Grade: D"; gradeEl.textContent = "Grade Point: 4";}
     else rankEl.textContent = "Fail";
   
     // ✅ clear inputs
